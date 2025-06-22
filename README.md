@@ -1,4 +1,4 @@
-# 📦 Boo Keeper - Inventory Management System
+# 📦 Book Keeper - Inventory Management System
 
 **Boo Keeper** is a modern, responsive, and easy-to-use inventory management system designed for single-user use. It helps small businesses or solo operators efficiently manage their inventory, track sales, calculate profits, and generate insightful reports—all through a sleek React-based UI.
 
