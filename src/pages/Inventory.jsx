@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {exportInventoryToExcel} from "../utils/exportToExcel";
+import {exportToExcel} from "../utils/exportToExcel";
 
 export default function Inventory() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -86,12 +86,12 @@ export default function Inventory() {
     setProducts(updated);
   };
 
-  const exportToExcel = () => {
+  const handleExportToExcel = () => {
     if (products.length === 0) {
       alert("No products to export");
       return;
     }
-    exportInventoryToExcel(products);
+    exportToExcel(products); // ← this is the one from utils
   };
 
   return (
@@ -106,7 +106,7 @@ export default function Inventory() {
             + Add Product
           </button>
           <button
-            onClick={exportToExcel}
+            onClick={handleExportToExcel}
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
           >
             Export to Excel

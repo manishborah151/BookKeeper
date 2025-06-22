@@ -1,4 +1,5 @@
-import ExcelJS from "exceljs";
+import React from "react";
+const ExcelJS = React.lazy(() => import("exceljs"));
 import {saveAs} from "file-saver";
 
 export async function exportToExcel(
