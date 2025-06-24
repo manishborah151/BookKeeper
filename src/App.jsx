@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 import Layout from "./components/Layout";
 import Dashboard from "./pages/Dashboard";
 
@@ -14,10 +15,11 @@ function App() {
       <ThemeProvider>
         <Layout>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/inventory" element={<Inventory />} />
-            <Route path="/sales" element={<Sales />} />
-            <Route path="/settings" element={<Settings />} />
+            <Route path="/" element={<Navigate to="/BookKeeper/Dashboard/" />} />
+            <Route path="/BookKeeper/Dashboard/" element={<Dashboard />} />
+            <Route path="/BookKeeper/inventory/" element={<Inventory />} />
+            <Route path="/BookKeeper/sales/" element={<Sales />} />
+            <Route path="/BookKeeper/settings/" element={<Settings />} />
           </Routes>
         </Layout>
       </ThemeProvider>
